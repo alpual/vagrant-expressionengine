@@ -38,9 +38,6 @@ sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 #restart apache
 sudo service apache2 restart
 
-# create database
-sudo mysql --user=root --password=root -e "create database ee_vagrant"
-
 # file permissions set
 find /vagrant -type d -exec chmod 755 {} \;
 find /vagrant -type f -exec chmod 644 {} \;
