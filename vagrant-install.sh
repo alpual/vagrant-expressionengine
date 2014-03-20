@@ -19,6 +19,7 @@ sudo apt-get update
 sudo apt-get install -y php5 apache2 libapache2-mod-php5
 sudo apt-get install -y mysql-server-5.5
 sudo apt-get install -y php5-mysql 
+sudo apt-get install -y php5-gd php5-mcrypt git-core php5-curl
 
 sudo a2enmod rewrite
 
@@ -38,7 +39,7 @@ sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 sudo service apache2 restart
 
 # create database
-sudo mysql --user=root --password=root -e "create database vagrant"
+sudo mysql --user=root --password=root -e "create database ee_vagrant"
 
 # file permissions set
 find /vagrant -type d -exec chmod 755 {} \;
