@@ -12,13 +12,14 @@ sudo apt-get install -y python-software-properties
 sudo apt-get update
 
 sudo add-apt-repository -y ppa:ondrej/php5
+sudo apt-add-repository -y ppa:ptn107/apache
 
 sudo apt-get update
 
 # install apps
 sudo apt-get install -y php5 apache2 libapache2-mod-php5
 sudo apt-get install -y mysql-server-5.5
-sudo apt-get install -y php5-mysql 
+sudo apt-get install -y php5-mysql
 sudo apt-get install -y php5-gd php5-mcrypt git-core php5-curl
 
 sudo a2enmod rewrite
@@ -41,4 +42,3 @@ sudo service apache2 restart
 # file permissions set
 find /vagrant -type d -exec chmod 755 {} \;
 find /vagrant -type f -exec chmod 644 {} \;
-
