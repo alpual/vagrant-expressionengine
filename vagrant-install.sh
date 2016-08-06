@@ -42,3 +42,7 @@ sudo service apache2 restart
 # file permissions set
 find /vagrant -type d -exec chmod 755 {} \;
 find /vagrant -type f -exec chmod 644 {} \;
+
+#Useful tools
+sudo apt-get -y install vim
+sudo apt-get -y install tmux
